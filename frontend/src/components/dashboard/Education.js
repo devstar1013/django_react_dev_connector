@@ -36,7 +36,7 @@ const Education = ({ education }) => {
       <table className="table">
         <thead>
           <tr>
-            <th>School</th>
+            <th>High School</th>
             <th className="hide-sm">Degree</th>
             <th className="hide-sm">Years</th>
             <th />
