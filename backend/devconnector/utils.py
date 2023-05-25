@@ -8,5 +8,5 @@ def get_gravatar(email, size="200"):
         hashlib.md5(email.encode('utf-8')).hexdigest() + "?"
     gravatar_url += urlencode({'d': 'retro', 's': str(size)})
 
-    print("Gravatar", gravatar_url)
+    #print("Gravatar ", gravatar_url)
     return gravatar_url

@@ -46,7 +46,7 @@ class GetAuthUserView(APIView):
     def get(self, request):
         token = request.headers.get('Authorization')
         if not token:
-            return Response(data={'error':'No Token. Authorization Denied'}, status=status.HTTP_401_UNAUTHORIZED)
+            return Response(data={'error':'No Token. Authorization Denied '}, status=status.HTTP_401_UNAUTHORIZED)
         user = User.objects.get(id=request.user.id)
         data = UserSerializer(user).data
         return Response(data)
@@ -56,7 +56,7 @@ class GetAuthUserView(APIView):
         password = request.data.get('password')
 
         if email == "" or password == "":
-            return Response({'error': 'Please provide both email and password'},status=status.HTTP_400_BAD_REQUEST)
+            return Response({'error': 'Please provide both email and password '},status=status.HTTP_400_BAD_REQUEST)
         
         user = authenticate(username=email, password=password)
 
